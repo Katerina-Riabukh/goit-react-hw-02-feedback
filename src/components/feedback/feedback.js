@@ -46,7 +46,7 @@ export class Feedback extends Component{
         return (
          
             <div>
-                <Section title={ feedbackTitle} children={({handleClickGood, handleClickNeutral, handleClickBad})}/>
+                <Section title={ feedbackTitle} children ={[ handleClickGood, handleClickNeutral, handleClickBad ]}/>
                  {/* <FeedbackOptions handleClickGood={this.handleClickGood} handleClickNeutral={this.handleClickNeutral} handleClickBad={this.handleClickBad}/> */}
                 <p className="feedbackDescription">Statistics</p>
                 <Statistics good={this.state.good} neutral={this.state.neutral} bad={this.state.bad} total={total} positiveFeedback={positiveFeedback}/>
