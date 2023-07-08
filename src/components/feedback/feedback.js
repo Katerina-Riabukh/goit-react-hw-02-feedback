@@ -1,6 +1,7 @@
 import { Component } from "react";
 import { Statistics } from "components/Statistics/Statistics";
-import { FeedbackOptions } from "components/FeedbackOptions/FeedbackOptions";
+// import { FeedbackOptions } from "components/FeedbackOptions/FeedbackOptions";
+import { Section } from "components/Section/Section";
 
 
 export class Feedback extends Component{
@@ -37,15 +38,16 @@ export class Feedback extends Component{
     render() {
         const total = this.countTotalFeedback();
         const positiveFeedback = this.countPositiveFeedbackPercentage(this.state.good, total);
+        const feedbackTitle = 'Please leave feedback'
+        const handleClickGood = this.handleClickGood
+        const handleClickNeutral = this.handleClickNeutral
+        const handleClickBad = this.handleClickBad
 
         return (
          
             <div>
-                <h1 className="feedbackTitle">Please leave feedback</h1>
-                {/* <button className="GoodBtn" type="button" onClick={this.handleClickGood}>Good</button>
-                <button className="NeutralBtn" type="button" onClick={this.handleClickNeutral}>Neutral</button>
-                <button className="BadBtn" type="button" onClick={this.handleClickBad}>Bad</button> */}
-                <FeedbackOptions handleClickGood={this.handleClickGood} handleClickNeutral={this.handleClickNeutral} handleClickBad={this.handleClickBad}/>
+                <Section title={ feedbackTitle} children={({handleClickGood, handleClickNeutral, handleClickBad})}/>
+                 {/* <FeedbackOptions handleClickGood={this.handleClickGood} handleClickNeutral={this.handleClickNeutral} handleClickBad={this.handleClickBad}/> */}
                 <p className="feedbackDescription">Statistics</p>
                 <Statistics good={this.state.good} neutral={this.state.neutral} bad={this.state.bad} total={total} positiveFeedback={positiveFeedback}/>
             </div>
