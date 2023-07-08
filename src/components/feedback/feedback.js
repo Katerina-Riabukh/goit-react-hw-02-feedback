@@ -42,9 +42,9 @@ export class Feedback extends Component{
          
             <div>
                 <h1 className="feedbackTitle">Please leave feedback</h1>
-                <button className="GoodBtn" type="button" onClick={this.handleClickGood}>Good</button>
+                {/* <button className="GoodBtn" type="button" onClick={this.handleClickGood}>Good</button>
                 <button className="NeutralBtn" type="button" onClick={this.handleClickNeutral}>Neutral</button>
-                <button className="BadBtn" type="button" onClick={this.handleClickBad}>Bad</button>
+                <button className="BadBtn" type="button" onClick={this.handleClickBad}>Bad</button> */}
                 <FeedbackOptions handleClickGood={this.handleClickGood} handleClickNeutral={this.handleClickNeutral} handleClickBad={this.handleClickBad}/>
                 <p className="feedbackDescription">Statistics</p>
                 <Statistics good={this.state.good} neutral={this.state.neutral} bad={this.state.bad} total={total} positiveFeedback={positiveFeedback}/>
