@@ -1,0 +1,42 @@
+.feedbackResult {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 50px;
+
+}
+
+.listItem {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    flex-basis: calc(100% / 3);
+
+}
+
+.counter {
+    padding: 10px;
+    border: 0.5px solid rgb(40, 66, 111);
+    border-radius: 5px;
+    background-color: aliceblue;
+
+}
+
+.feedbackTotal {
+    display: flex;
+    justify-content: space-around;
+}
+
+.listItemPersent {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+
+}
+
+.listItemTotal {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 284px;
+}

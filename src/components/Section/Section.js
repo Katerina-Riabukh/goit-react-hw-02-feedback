@@ -1,12 +1,18 @@
 import React from "react";
-import { FeedbackOptions } from "components/FeedbackOptions/FeedbackOptions";
+import css from './section.module.css'
+import PropTypes from 'prop-types'
+
 
 export const Section = ({ title, children }) => {
- 
-    
-   return <section>
-    <h1 className="feedbackTitle">{ title}</h1>
-        <FeedbackOptions children={children} />
-   </section>
-  
+   
+   return   <section className={css.section}>
+      {title && <h2 className={css.title}>{title}</h2>}
+      {children}
+    </section>
 };
+
+
+Section.propTypes = {
+   title: PropTypes.string.isRequired,
+   children: PropTypes.element.isRequired,
+}

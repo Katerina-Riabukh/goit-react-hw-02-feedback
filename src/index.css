@@ -19,3 +19,11 @@ li,
 ul {
   list-style: none;
 }
+
+h1,
+h2,
+li,
+ul {
+  margin: 0;
+  padding: 0;
+}

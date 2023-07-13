@@ -1,0 +1,12 @@
+ .wraper {
+     width: 780px;
+     margin-left: auto;
+     margin-right: auto;
+     margin-top: 40px;
+     height: 700px;
+     display: flex;
+     font-size: 40px;
+     color: #010101;
+     background-color: lightblue;
+
+ }
